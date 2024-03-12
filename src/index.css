@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.mynav{
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+}
+.image{
+    background-color: hsl(120, 100%, 1%);
+}
+.routes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    list-style: none;
+}
+.list{
+    text-decoration: none;
+    color: black;
+}
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.Home,.Dash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
