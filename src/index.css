@@ -4,38 +4,154 @@
     padding: 0;
     overflow-x: hidden;
 }
-
+.appdiv{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(9, 9, 9);
+}
 .mynav{
+    gap:10px;
     display: flex;
     justify-content: space-evenly;
     height: 60px;
 }
 .image{
-    background-color: hsl(120, 100%, 1%);
+    margin-top: 11px;
 }
 .routes{
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: white;
     list-style: none;
 }
 .list{
     text-decoration: none;
-    color: black;
+    color: rgb(244, 238, 238);
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 button{
     padding: 0;
     border: none;
     background: none;
+    color: white;
 }
 .buttons{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
-.Home,.Dash{
+.navbtn{
+    background-color: rgba(231, 231,231, 0.15);
+    color: rgb(183, 177, 177);
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+.Home{
+    width: 100vw;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: rgb(232, 231, 231);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: 600;
+}
+.Dash{
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(232, 231, 231);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: 600;
+}
+.Template{
+    padding:12 12 12 12;
+    gap:50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-between;
+    margin-left: 185px;
+}
+
+.description{
+    color: white;
+    width: 600px;
+}
+.title{
+    font-size: 27px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}   
+
+.desc1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.desc2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    color: rgb(63, 212, 212);
+    margin-bottom: 20px;
+}
+.signgoogle{
+    margin-top: 10px;
+    font-size:17px;
+    text-align: center;
+}
+.googleicon{
+    padding-top: 2px;
+    margin-left: 100px;
+    margin-right: 10px;
+    height: 10px;
+}
+.underline{
+    width: 100vw;
+    height: 1px;
+    background-color: rgb(50, 50, 51);
+}
+.ortext{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.loginformemail{
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.loginemailinput{
+    margin-top: 5px;
+    background-color: rgba(231, 231,231, 0.15);
+    border-radius: 5px;
+    color: white;
+}
+.frame{
+    height: 300px;
+    width: 330px;
+}
+.loginformpass{
+    margin-top: 8px;
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.loginpassworddiv{
+    margin-top: 5px;
+    background-color: rgba(231, 231,231, 0.15);
+    border-radius: 5px;
+    color: white;
+}
+.loginpasswordinput{
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.loginimg{
+    height: 300px;
+    width: 300px;
 }

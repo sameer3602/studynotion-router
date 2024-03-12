@@ -1,5 +1,4 @@
 import {Routes,Route} from "react-router-dom";
-import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Dash from "./pages/Dash";
@@ -9,7 +8,7 @@ import Start from "./pages/Start";
 function App() {
   const [isLoggedin, setIsLoggedIn]= useState(false);
   return (
-  <div>
+  <div className="appdiv">
     <Navbar isLoggedin={isLoggedin} setIsLoggedIn={setIsLoggedIn}/> 
     <Routes>
       <Route path="/" element= {<Start/>}/>

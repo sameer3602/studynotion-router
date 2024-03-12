@@ -23,9 +23,10 @@ const LoginForm = ({setIsLoggedIn}) => {
     }
   return (
     <form onSubmit={submithandler}>
-        <label>
-            <p>Email Address<sup>*</sup></p>
+        <label className='emaillabel'>
+            <p className='loginformemail'>Email Address<sup>*</sup></p>
             <input 
+                className='loginemailinput'
                 type='email' 
                 required
                 value={Formdata.email} 
@@ -33,18 +34,21 @@ const LoginForm = ({setIsLoggedIn}) => {
                 placeholder='Enter Email id:'
                 name="email" />
         </label>
-        <label>
-            <p>Password<sup>*</sup></p>
-            <input 
-                type={showpass ?('text'):('password')} 
-                required
-                value={Formdata.password} 
-                onChange={changehandler} 
-                placeholder='Enter Password:'
-                name="password"/>
-            <span onClick={()=> setshowpass((prev)=>!prev)}> 
-                {showpass ? (<FaRegEye />):(<FaEyeSlash />)}
-            </span>
+        <label className='passwordlabel' htmlFor='password'>
+            <p className='loginformpass'>Password<sup>*</sup></p>
+            <div className='loginpassworddiv'>
+                <input 
+                    className='loginpasswordinput'
+                    type={showpass ?('text'):('password')} 
+                    required
+                    value={Formdata.password} 
+                    onChange={changehandler} 
+                    placeholder='Enter Password:'
+                    name="password"/>
+                <span onClick={()=> setshowpass((prev)=>!prev)}> 
+                    {showpass ? (<FaRegEye />):(<FaEyeSlash />)}
+                </span>
+            </div>
             <Link to="#">
                 <p>Forgot password?</p>
             </Link>

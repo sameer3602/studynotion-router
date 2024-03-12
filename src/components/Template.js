@@ -5,29 +5,29 @@ import LoginForm from './LoginForm'
 import { FcGoogle } from "react-icons/fc";
 const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
   return (
-    <div>
-        <div>
-            <h1>{title}</h1>
+    <div className='Template'>
+        <div className='description'>
+            <h1 className='title'>{title}</h1>
             <p>
-                <span>{desc1}</span>
-                <span>{desc2}</span>
+                <p className='desc1'>{desc1}</p>
+                <p className='desc2'>{desc2}</p>
             </p>
             {formtype === "signup" ?
                 (<SignupForm setIsLoggedIn={setIsLoggedIn}/>):
                 (<LoginForm setIsLoggedIn={setIsLoggedIn}/>)}
             <div>
-                <div></div>
-                <p>OR</p>
-                <div></div>
+                <div className='underline'></div>
+                <p className='ortext'>OR</p>
+                <div className='underline'></div>
             </div>
-            <button>
+            <button className='signgoogle'>
+                <span className='googleicon'><FcGoogle /></span>
                 Sign up with Google
-                <span><FcGoogle /></span>
             </button>
         </div>
         <div>
-            <img src={frameImage} width={558} height={504} loading='lazy' />
-            <img src={image} width={558} height={504} loading='lazy' />
+            <img src={frameImage} className='frame' loading='lazy' />
+            <img src={image} className='loginimg' loading='lazy' />
         </div>
 
     </div>

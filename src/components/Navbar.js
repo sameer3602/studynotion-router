@@ -27,7 +27,7 @@ export const Navbar = (props) => {
         <div className="buttons">
           { !isLoggedin &&
             <Link to="/login">
-              <button onClick={()=>{
+              <button className="navbtn" onClick={()=>{
                   setIsLoggedIn(true);
                   toast.success("Logged in");
                 }}>Login</button>
@@ -36,14 +36,14 @@ export const Navbar = (props) => {
 
           { !isLoggedin &&
             <Link to="/signup">
-              <button>Sign Up
+              <button className="navbtn">Sign up
               </button>
             </Link>
           }
 
           { isLoggedin &&
             <Link to="/">
-              <button onClick={()=>{
+              <button className="navbtn" onClick={()=>{
                 setIsLoggedIn(false);
                 toast.success("Logged out")
               }}>Log Out</button>
@@ -52,7 +52,7 @@ export const Navbar = (props) => {
 
           { isLoggedin &&
             <Link to="/dashboard">
-              <button>Dashboard</button>
+              <button className="navbtn">Dashboard</button>
             </Link>
           }
         </div>
