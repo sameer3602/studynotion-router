@@ -4,7 +4,7 @@ import Template from '../components/Template';
 export const Sign = ({setIsLoggedIn}) => {
   return (
     <Template
-      title="Welcome Back"
+      title="Join the millions learning to code with StudyNotion for free"
       desc1="Build Skills for today,tomorrow, and Beyond"
       desc2="Education to future-proof your career."
       image={signupImg}

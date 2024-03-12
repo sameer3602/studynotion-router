@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import { FaEyeSlash,FaRegEye  } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
-const LoginForm = (props) => {
-    let setIsLoggedIn=props.setIsLoggedIn
-    const navigate= useNavigate;
+const LoginForm = ({setIsLoggedIn}) => {
+    const navigate= useNavigate();
     const [Formdata,setFormdata]=useState({email:"",password:""})
     const [showpass,setshowpass]=useState(false)
     function changehandler(event){

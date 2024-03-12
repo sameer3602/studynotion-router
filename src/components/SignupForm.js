@@ -1,9 +1,13 @@
 import React from 'react'
 import { FaEyeSlash,FaRegEye  } from "react-icons/fa";
 import { useState } from 'react';
-const SignupForm = () => {
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+const SignupForm = ({setIsLoggedIn}) => {
     const [Formdata,setFormdata]=useState({Firstname:"",Lastname:"",email:"",password:"",confirmpassword:""})
     const [showpass,setshowpass]=useState(false)
+    const [confirmshowpass,confirmsetshowpass]=useState(false)
+    const navigate=useNavigate();
     function changehandler(event){
         setFormdata(prevData => {
             return{
@@ -14,6 +18,15 @@ const SignupForm = () => {
     }
     function submithandler(event){
         event.preventDefault();
+        if (Formdata.password != Formdata.confirmpassword){
+            toast.error("Password not Match");
+            return;
+        }
+        else{
+            setIsLoggedIn(true);
+            toast.success("Account Created")
+            navigate("/dashboard");
+        }
         console.log(Formdata);
     }
   return (
@@ -79,14 +92,14 @@ const SignupForm = () => {
                 <label>
                     <p>Confirm Password<sup>*</sup></p>
                     <input 
-                        type={showpass ?('text'):('password')} 
+                        type={confirmshowpass ?('text'):('password')} 
                         required
                         value={Formdata.confirmpassword} 
                         onChange={changehandler} 
                         placeholder='Confirm Password:'
                         name="confirmpassword"/>
-                    <span onClick={()=> setshowpass((prev)=>!prev)}> 
-                        {showpass ? (<FaRegEye />):(<FaEyeSlash />)}
+                    <span onClick={()=> confirmsetshowpass((prev)=>!prev)}> 
+                        {confirmshowpass ? (<FaRegEye />):(<FaEyeSlash />)}
                     </span>
                 </label>
             </div>
