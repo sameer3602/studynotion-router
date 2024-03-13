@@ -31,7 +31,7 @@ const LoginForm = ({setIsLoggedIn}) => {
                 required
                 value={Formdata.email} 
                 onChange={changehandler} 
-                placeholder='Enter Email id:'
+                placeholder='   Enter Email id:'
                 name="email" />
         </label>
         <label className='passwordlabel' htmlFor='password'>
@@ -40,20 +40,20 @@ const LoginForm = ({setIsLoggedIn}) => {
                 <input 
                     className='loginpasswordinput'
                     type={showpass ?('text'):('password')} 
-                    required
+                    required7
                     value={Formdata.password} 
                     onChange={changehandler} 
-                    placeholder='Enter Password:'
+                    placeholder='  Enter Password:'
                     name="password"/>
-                <span onClick={()=> setshowpass((prev)=>!prev)}> 
+                <span className='loginicon' onClick={()=> setshowpass((prev)=>!prev)}> 
                     {showpass ? (<FaRegEye />):(<FaEyeSlash />)}
                 </span>
             </div>
             <Link to="#">
-                <p>Forgot password?</p>
+                <p className='forgotpass'>Forgot password?</p>
             </Link>
         </label>
-        <button>
+        <button className='signbtn'> 
             Sign in
         </button>
     </form>

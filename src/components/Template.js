@@ -25,7 +25,7 @@ const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
                 Sign up with Google
             </button>
         </div>
-        <div>
+        <div className='logsignImages'>
             <img src={frameImage} className='frame' loading='lazy' />
             <img src={image} className='loginimg' loading='lazy' />
         </div>

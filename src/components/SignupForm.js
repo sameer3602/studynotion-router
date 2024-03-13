@@ -31,79 +31,84 @@ const SignupForm = ({setIsLoggedIn}) => {
     }
   return (
     <div>
-        <div>
-            <button>
+        <div className='signuptype'>
+            <button className='studentbtn'>
                 Student
             </button>
-            <button>
+            <button className='instructorbtn'>
                 Instructor
             </button>
         </div>
         <form onSubmit={submithandler}>
             <div className='firstlast'>
                 <label>
-                    <p>First Name<sup>*</sup></p>
+                    <p className='signuplabel'>First Name<sup>*</sup></p>
                     <input
+                        className='signupfirstnameinput'
                         required
                         type='text'
                         name="Firstname"
                         onChange={changehandler}
-                        placeholder='Enter First Name'
+                        placeholder='   Enter First Name'
                         value={Formdata.Firstname}
                     />
                 </label>
                 <label>
-                    <p>Last Name<sup>*</sup></p>
+                    <p className='signuplabel'>Last Name<sup>*</sup></p>
                     <input
                         required
+                        className='signuplastnameinput'
                         type='text'
                         name="Lastname"
                         onChange={changehandler}
-                        placeholder='Enter Last Name'
+                        placeholder='    Enter Last Name'
                         value={Formdata.Lastname}
                     />
                 </label>
             </div>
             <label>
-                <p>email<sup>*</sup></p>
+                <p className='signuplabel'>Email<sup>*</sup></p>
                 <input
+                    className='signupemailinput'
                     required
                     type='text'
                     name="email"
                     onChange={changehandler}
-                    placeholder='Enter email address'
+                    placeholder='    Enter email address'
                     value={Formdata.email}
                 />
             </label>
             <div className='passconfirm'>
                 <label>
-                    <p> Create Password<sup>*</sup></p>
+                    <p className='signuplabel'> Create Password<sup>*</sup></p>
                     <input 
+                        className='signuppasswordinput'
                         type={showpass ?('text'):('password')} 
                         required
                         value={Formdata.password} 
                         onChange={changehandler} 
-                        placeholder='Enter Password:'
+                        placeholder='   Enter Password:'
                         name="password"/>
-                    <span onClick={()=> setshowpass((prev)=>!prev)}> 
+                    <span className="signupicon" onClick={()=> setshowpass((prev)=>!prev)}> 
                         {showpass ? (<FaRegEye />):(<FaEyeSlash />)}
                     </span>
                 </label>
                 <label>
-                    <p>Confirm Password<sup>*</sup></p>
+                    <p className='signuplabel'>Confirm Password<sup>*</sup></p>
                     <input 
+                        className='signupconfirmpasswordinput'
                         type={confirmshowpass ?('text'):('password')} 
                         required
                         value={Formdata.confirmpassword} 
                         onChange={changehandler} 
-                        placeholder='Confirm Password:'
+                        placeholder='   Confirm Password:'
                         name="confirmpassword"/>
-                    <span onClick={()=> confirmsetshowpass((prev)=>!prev)}> 
+                    <span className="signupicon" onClick={()=> confirmsetshowpass((prev)=>!prev)}> 
                         {confirmshowpass ? (<FaRegEye />):(<FaEyeSlash />)}
                     </span>
                 </label>
             </div>
-            <button>
+            <button className='createAcc'>
                 Create Account
             </button>
         </form> 
