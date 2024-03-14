@@ -213,16 +213,19 @@ button{
 }
 .logsignImages{
     display:flex;
+    flex-wrap: wrap;
     flex-direction:column;
+    height: max-content;
+    width:320px;
 }
 .frame{
+    position:relative;
     height: 320px;
     width: 310px;
-    position: relative;
 }
 .loginimg{
+    position:absolute;
     margin-top: 10px;
     height: 300px;
     width: 300px;
-    position: fixed;
 }
