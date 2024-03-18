@@ -20,7 +20,7 @@ export const Navbar = (props) => {
               <Link to="/dashboard" className='list'>About</Link>
             </li>
             <li>
-              <Link to="/" className='list'>Contact</Link>
+              <Link to="/contact" className='list'>Contact</Link>
             </li>
           </ul>
         </nav>

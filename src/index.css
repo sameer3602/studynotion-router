@@ -60,7 +60,7 @@ button{
     font-size: larger;
     font-weight: 600;
 }
-.Dash{
+.Dash,.Contact{
     width: 100vw;
     height: 400px;
     display: flex;
@@ -228,4 +228,19 @@ button{
     margin-top: 10px;
     height: 300px;
     width: 300px;
+}
+.Contact{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.contMobile{
+    font-weight: 600;
+    color: aqua;
+    margin-bottom: 20px;
+}
+.contGmail{
+    font-weight: 600;
+    color: aqua;
+    margin-bottom: 20px;
 }
